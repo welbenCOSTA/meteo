@@ -13,14 +13,17 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "esModuleInterop": true,
 
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+      /* JEST */
+      "esModuleInterop": true,
+      "types": ["node", "jest", "@testing-library/jest-dom"],
   },
-  "include": ["src"],
+  "include": ["src", "src/configs/jest/setupTest.js"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
