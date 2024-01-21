@@ -1,7 +1,7 @@
 import { type ReactElement, type ReactNode } from 'react';
 import { afterEach } from 'vitest';
-import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 import { ThemeProvider } from 'styled-components';
+import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 import { type RenderOptions, render, cleanup } from '@testing-library/react';
 
 import { defaultTheme } from '../styles/theme';

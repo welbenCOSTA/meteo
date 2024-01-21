@@ -26,7 +26,7 @@ describe('<NextDays />', () => {
     renderComponent([]);
 
     const textError = screen.getByRole('heading', {
-      name: /não temos previsoes par aos proximos dias\./i,
+      name: /não temos previsões para os proximos dias\./i,
     });
 
     expect(textError).toBeInTheDocument();

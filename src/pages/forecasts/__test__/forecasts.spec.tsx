@@ -1,11 +1,12 @@
+// @vitest-environment jsdom
+
 import { render, screen } from '@/test/customRender';
 import { describe, it, expect } from 'vitest';
-import nock from 'nock';
 
 import { Forecasts } from '..';
 
-import responseMock from '@/test/mocks/responseMock';
-import { endpoints } from '@/services/Forecast';
+import mockRequest from '@/test/mockRequest';
+import { METHODS, TEST_URL } from '@/test/msw/const';
 
 const renderComponent = () => {
   return render(<Forecasts />);
@@ -13,19 +14,14 @@ const renderComponent = () => {
 
 describe('<Forecasts />', () => {
   it('should render page when success request', async () => {
-    nock(import.meta.env.VITE_BASE_URL)
-      .get(endpoints.forecasts())
-      .query(true)
-      .reply(200, responseMock);
-
     renderComponent();
 
     const titleTemp = await screen.findByRole('heading', {
-      name: /não temos informações sobre a previsão atual/i,
+      name: /não temos previsões das horas anteriores\./i,
     });
 
     const titleNextDays = await screen.findByRole('heading', {
-      name: /não temos previsoes par aos proximos dias\./i,
+      name: /não temos previsões para os proximos dias\./i,
     });
 
     expect(titleTemp).toBeInTheDocument();
@@ -33,10 +29,7 @@ describe('<Forecasts />', () => {
   });
 
   it('should render error page when error request ', async () => {
-    nock(import.meta.env.VITE_BASE_URL)
-      .get(endpoints.forecasts())
-      .query(true)
-      .reply(400, {});
+    mockRequest.mockrequest(TEST_URL, METHODS.GET, 404, {});
 
     renderComponent();
 

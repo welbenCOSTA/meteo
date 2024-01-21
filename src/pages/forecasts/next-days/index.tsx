@@ -12,7 +12,7 @@ export function NextDays({ nextDays }: NextDaysProps) {
   if (nextDays.length === 0) {
     return (
       <NextDaysContainer>
-        <h3>Não temos previsoes par aos proximos dias.</h3>
+        <h3>Não temos previsões para os proximos dias.</h3>
       </NextDaysContainer>
     );
   }

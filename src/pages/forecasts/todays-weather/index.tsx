@@ -9,7 +9,7 @@ export function TodaysWeather({ todaysWeather }: TodaysWeatherProps) {
   if (todaysWeather.length === 0) {
     return (
       <TodaysWeatherContainer>
-        <h3>Não temos previsoes das horas anteriores.</h3>
+        <h3>Não temos previsões das horas anteriores.</h3>
       </TodaysWeatherContainer>
     );
   }

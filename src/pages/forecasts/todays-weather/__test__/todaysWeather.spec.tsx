@@ -26,7 +26,7 @@ describe('<TodaysWeather />', () => {
     renderComponent([]);
 
     const textError = screen.getByRole('heading', {
-      name: /não temos previsoes das horas anteriores\./i,
+      name: /não temos previsões das horas anteriores\./i,
     });
 
     expect(textError).toBeInTheDocument();

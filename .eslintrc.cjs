@@ -55,6 +55,7 @@ module.exports = {
     "jsx-a11y/role-supports-aria-props": "warn",
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/no-misused-promises": "off",
-    "@typescript-eslint/no-non-null-assertion": "off"
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/strict-boolean-expressions": "off"
   }
 }
