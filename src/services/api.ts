@@ -1,5 +1,5 @@
-import axios from "axios";
+import axios from 'axios';
 
 export const api = axios.create({
-  baseURL: 'https://api.open-meteo.com/v1'
-})
+  baseURL: import.meta.env.VITE_BASE_URL,
+});

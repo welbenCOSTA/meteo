@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import { styled } from 'styled-components';
 
 export const InputContainer = styled.div`
   width: 100%;
@@ -8,13 +8,13 @@ export const InputContainer = styled.div`
   gap: 0.5rem;
 
   label {
-    color: ${props => props.theme.colors.white};
+    color: ${(props) => props.theme.colors.white};
   }
 
   input {
     width: 100%;
-    background-color: ${props => `${props.theme.colors['gray-900']}80`};
-    color: ${props => props.theme.colors.white};
+    background-color: ${(props) => `${props.theme.colors['gray-900']}80`};
+    color: ${(props) => props.theme.colors.white};
     border-radius: 0.375rem;
     padding: 1rem;
     border: none;
@@ -23,6 +23,6 @@ export const InputContainer = styled.div`
   span {
     font-size: 0.875rem;
     margin-top: 0.5rem;
-    color: ${props => props.theme.colors['red-300']};
+    color: ${(props) => props.theme.colors['red-300']};
   }
-`
+`;

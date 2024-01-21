@@ -1,5 +1,5 @@
-import { styled } from "styled-components";
-import background from '@/assets/background-meteo.jpeg'
+import { styled } from 'styled-components';
+import background from '@/assets/background-meteo.jpeg';
 
 export const LayoutConainer = styled.div`
   width: 100vw;
@@ -11,4 +11,4 @@ export const LayoutConainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-`
+`;

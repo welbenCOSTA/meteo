@@ -1,20 +1,19 @@
-import { InfoDays } from "@/hooks/useForecasts/types";
-import { 
+import { type InfoDays } from '@/hooks/useForecasts/types';
+import {
   TempContainer,
   CurrentTempContainer,
-  Separator, 
+  Separator,
   HighAndLowContainer,
   HighTempContainer,
-  LowTempContainer
-} from "./styles";
+  LowTempContainer,
+} from './styles';
 
-interface TempInfos {
-  currentInfos: InfoDays | null
-  currentTemp: number
+interface TempInfosProps {
+  currentInfos: InfoDays | null;
+  currentTemp: number;
 }
 
-export function TempInfos({ currentInfos, currentTemp }: TempInfos) {
-
+export function TempInfos({ currentInfos, currentTemp }: TempInfosProps) {
   if (currentInfos === null) {
     return (
       <TempContainer>
@@ -22,14 +21,14 @@ export function TempInfos({ currentInfos, currentTemp }: TempInfos) {
           <h3>Não temos informações sobre a previsão atual</h3>
         </CurrentTempContainer>
       </TempContainer>
-    )
+    );
   }
 
-  const sunsetHours = new Date(currentInfos.sunset).getHours()
-  const sunsetMinutes = new Date(currentInfos.sunset).getMinutes()
+  const sunsetHours = new Date(currentInfos.sunset).getHours();
+  const sunsetMinutes = new Date(currentInfos.sunset).getMinutes();
 
-  const sunriswHours = new Date(currentInfos.sunrise).getHours()
-  const sunriseMinutes = new Date(currentInfos.sunrise).getMinutes()
+  const sunriswHours = new Date(currentInfos.sunrise).getHours();
+  const sunriseMinutes = new Date(currentInfos.sunrise).getMinutes();
 
   return (
     <TempContainer>
@@ -68,5 +67,5 @@ export function TempInfos({ currentInfos, currentTemp }: TempInfos) {
         </LowTempContainer>
       </HighAndLowContainer>
     </TempContainer>
-  )
+  );
 }

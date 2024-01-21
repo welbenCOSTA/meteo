@@ -1,15 +1,15 @@
-import { styled } from "styled-components";
+import { styled } from 'styled-components';
 
 export const AddForecastsContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
   padding: 0 1rem 7rem 1rem;
 
   gap: 2.5rem;
 
-  h2 { 
+  h2 {
     text-align: center;
   }
 
@@ -26,4 +26,4 @@ export const AddForecastsContainer = styled.div`
     flex-direction: column;
     gap: 2rem;
   }
-`
+`;

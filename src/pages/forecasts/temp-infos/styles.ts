@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import { styled } from 'styled-components';
 
 export const TempContainer = styled.div`
   display: flex;
@@ -8,9 +8,9 @@ export const TempContainer = styled.div`
   @media screen and (max-width: 768px) {
     flex-direction: column;
   }
-`
+`;
 
-export const CurrentTempContainer  = styled.div`
+export const CurrentTempContainer = styled.div`
   h2 {
     font-size: 7rem;
 
@@ -26,23 +26,23 @@ export const CurrentTempContainer  = styled.div`
       font-size: 2rem;
     }
   }
-`
+`;
 
 export const Separator = styled.div`
   width: 0.1rem;
   height: 150px;
-  background-color: ${props => props.theme.colors.white};
+  background-color: ${(props) => props.theme.colors.white};
 
   @media screen and (max-width: 768px) {
     display: none;
   }
-`
+`;
 
 export const HighAndLowContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
-`
+`;
 
 const TempDetailsBase = styled.div`
   display: flex;
@@ -61,7 +61,7 @@ const TempDetailsBase = styled.div`
       font-size: 1.5rem;
     }
   }
-`
+`;
 
-export const HighTempContainer = styled(TempDetailsBase)``
-export const LowTempContainer = styled(TempDetailsBase)``
+export const HighTempContainer = styled(TempDetailsBase)``;
+export const LowTempContainer = styled(TempDetailsBase)``;

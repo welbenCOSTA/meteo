@@ -1,12 +1,10 @@
-import { ReactNode } from "react"
-import { LayoutConainer } from "./styles"
+import { type ReactNode } from 'react';
+import { LayoutConainer } from './styles';
 
 interface DefaultLayoutProps {
-  children: ReactNode
+  children: ReactNode;
 }
 
 export function DefaultLayout({ children }: DefaultLayoutProps) {
-  return (
-    <LayoutConainer>{children}</LayoutConainer>
-  )
+  return <LayoutConainer>{children}</LayoutConainer>;
 }

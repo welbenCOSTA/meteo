@@ -1,21 +1,21 @@
-import { useForecasts } from "@/hooks/useForecasts"
+import { useForecasts } from '@/hooks/useForecasts';
 
-import { TempInfos } from "./temp-infos"
-import { TodaysWeather } from "./todays-weather"
-import { NextDays } from "./next-days"
-import { ErrorPageForecasts } from "./errorPage"
-import { Content } from "./styles"
+import { TempInfos } from './temp-infos';
+import { TodaysWeather } from './todays-weather';
+import { NextDays } from './next-days';
+import { ErrorPageForecasts } from './errorPage';
+import { Content } from './styles';
 
 export function Forecasts() {
-  const { 
+  const {
     isLoading,
     isError,
-    currentInfos, 
+    currentInfos,
     currentTemp,
     todaysWeather,
-    nextDays 
-  } = useForecasts()
- 
+    nextDays,
+  } = useForecasts();
+
   if (isLoading) {
     return <p>Carregando...</p>;
   }

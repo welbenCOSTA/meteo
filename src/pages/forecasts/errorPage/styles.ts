@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import { styled } from 'styled-components';
 
 export const ErrorPageContainer = styled.div`
   display: flex;
@@ -14,7 +14,6 @@ export const ErrorPageContainer = styled.div`
 
     @media screen and (max-width: 768px) {
       font-size: 1.5rem;
+    }
   }
-  }
-`
-
+`;

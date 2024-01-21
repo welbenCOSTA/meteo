@@ -1,13 +1,8 @@
-import { endpoints } from './endpoint'
-import { ForecastsService } from './service'
-import { keys } from './key'
-import * as types from './types'
+import { endpoints } from './endpoint';
+import { ForecastsService } from './service';
+import { keys } from './key';
+import * as types from './types';
 
-const forecastsService = new ForecastsService()
+const forecastsService = new ForecastsService();
 
-export {
-  endpoints,
-  forecastsService,
-  keys,
-  types
-}
+export { endpoints, forecastsService, keys, types };

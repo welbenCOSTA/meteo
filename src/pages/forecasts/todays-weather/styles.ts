@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import { styled } from 'styled-components';
 
 export const TodaysWeatherContainer = styled.div`
   margin-top: 2.5rem;
@@ -6,7 +6,7 @@ export const TodaysWeatherContainer = styled.div`
   h3 {
     font-size: 1.5rem;
   }
-`
+`;
 
 export const WeatherList = styled.ul`
   list-style: none;
@@ -22,17 +22,17 @@ export const WeatherList = styled.ul`
   }
 
   &::-webkit-scrollbar {
-      display: none;
-    }
+    display: none;
+  }
 
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-`
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+`;
 
 export const WeatherCard = styled.li`
   width: 5rem;
   height: auto;
-  background-color: ${props => `${props.theme.colors['gray-900']}70`};
+  background-color: ${(props) => `${props.theme.colors['gray-900']}70`};
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -40,7 +40,8 @@ export const WeatherCard = styled.li`
   gap: 1.5rem;
   border-radius: 0.375rem;
 
-  p, span {
+  p,
+  span {
     font-size: 1.2rem;
   }
-`
+`;

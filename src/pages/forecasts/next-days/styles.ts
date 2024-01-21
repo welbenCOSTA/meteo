@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import { styled } from 'styled-components';
 
 export const NextDaysContainer = styled.div`
   margin-top: 2.5rem;
@@ -10,7 +10,7 @@ export const NextDaysContainer = styled.div`
   @media screen and (max-width: 768px) {
     display: none;
   }
-`
+`;
 
 export const NextDaysList = styled.ul`
   list-style: none;
@@ -20,18 +20,18 @@ export const NextDaysList = styled.ul`
   overflow-x: hidden;
 
   &::-webkit-scrollbar {
-      display: none;
-    }
+    display: none;
+  }
 
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-`
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+`;
 
 export const NextDaysCard = styled.li`
   width: 100%;
   height: auto;
   padding: 1rem;
-  background-color: ${props => `${props.theme.colors['gray-900']}70`};
+  background-color: ${(props) => `${props.theme.colors['gray-900']}70`};
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -49,4 +49,4 @@ export const NextDaysCard = styled.li`
   & + li {
     margin-top: 1rem;
   }
-`
+`;

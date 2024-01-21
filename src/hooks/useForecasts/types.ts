@@ -1,4 +1,4 @@
-export type InfoDays = {
+export interface InfoDays {
   date: string;
   temperature_max: number;
   temperature_min: number;
@@ -8,7 +8,7 @@ export type InfoDays = {
   wind_speed_max: number;
 }
 
-export type TodaysWeatherType =  { 
-  time: string 
-  temperature_2m: number
+export interface TodaysWeatherType {
+  time: string;
+  temperature_2m: number;
 }

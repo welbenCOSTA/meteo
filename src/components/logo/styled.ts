@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import { styled } from 'styled-components';
 
 export const LogoContainer = styled.div`
   display: flex;
@@ -9,4 +9,4 @@ export const LogoContainer = styled.div`
     font-family: 'Bebas Neue', sans-serif;
     font-size: 4rem;
   }
-`
+`;

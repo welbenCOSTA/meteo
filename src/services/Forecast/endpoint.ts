@@ -1,3 +1,3 @@
 export const endpoints = {
-  forecasts: () => '/forecast'
-}
+  forecasts: () => '/forecast',
+};

@@ -1,26 +1,26 @@
-import { format } from 'date-fns'
+import { format } from 'date-fns';
 
-import { InfoDays } from "@/hooks/useForecasts/types";
-import { daysOfWeek } from "@/utils/daysOfWeek";
-import { NextDaysContainer, NextDaysList, NextDaysCard } from "./styles";
+import { type InfoDays } from '@/hooks/useForecasts/types';
+import { daysOfWeek } from '@/utils/daysOfWeek';
+import { NextDaysContainer, NextDaysList, NextDaysCard } from './styles';
 
 interface NextDaysProps {
-  nextDays: InfoDays[]
+  nextDays: InfoDays[];
 }
 
 export function NextDays({ nextDays }: NextDaysProps) {
-  if (!nextDays.length) {
+  if (nextDays.length === 0) {
     return (
       <NextDaysContainer>
         <h3>Não temos previsoes par aos proximos dias.</h3>
       </NextDaysContainer>
-    )
+    );
   }
   return (
     <NextDaysContainer>
       <h3>Próximos 6 dias</h3>
       <NextDaysList>
-        {nextDays.map(nextDay => {
+        {nextDays.map((nextDay) => {
           const numberDayWeek = new Date(nextDay.date).getDay();
           return (
             <NextDaysCard key={nextDay.date}>
@@ -45,9 +45,9 @@ export function NextDays({ nextDays }: NextDaysProps) {
                 <span>Chuva</span>
               </div>
             </NextDaysCard>
-          )
+          );
         })}
       </NextDaysList>
     </NextDaysContainer>
-  )
+  );
 }

@@ -1,33 +1,33 @@
-import { useForm, FormProvider } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { useForm, FormProvider } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 
-import { useStore } from "@/zustand/store";
+import { useStore } from '@/zustand/store';
 
-import { Button } from "@/components/button";
-import { Input } from "@/components/input";
-import { Logo } from "@/components/logo";
+import { Button } from '@/components/button';
+import { Input } from '@/components/input';
+import { Logo } from '@/components/logo';
 
-import { resolverForm, SearchLocationData } from './validateForm'
-import { AddForecastsContainer } from './styles'
+import { resolverForm, type SearchLocationData } from './validateForm';
+import { AddForecastsContainer } from './styles';
 
 export function AddForecast() {
-  const navigate = useNavigate()
-  const { getLocations } = useStore()
+  const navigate = useNavigate();
+  const { getLocations } = useStore();
   const formData = useForm<SearchLocationData>({
     resolver: resolverForm,
-    defaultValues: { latitude: '', longitude: '' }
-  })
+    defaultValues: { latitude: '', longitude: '' },
+  });
 
-  const { 
-    handleSubmit, 
-    reset, 
-    formState: { errors } 
-  } = formData
+  const {
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = formData;
 
   function handleSearchLocation(data: SearchLocationData) {
-    getLocations(data.latitude, data.longitude)
-    navigate('/forecasts')
-    reset()
+    getLocations(data.latitude, data.longitude);
+    navigate('/forecasts');
+    reset();
   }
 
   return (
@@ -38,13 +38,13 @@ export function AddForecast() {
         <FormProvider {...formData}>
           <Input
             label="Latitude"
-            placeholder="Insira a coordenada"
+            placeholder="Insira a latitude"
             name="latitude"
             error={errors.latitude?.message}
           />
           <Input
             label="Longitude"
-            placeholder="Insira a coordenada"
+            placeholder="Insira a longitude"
             name="longitude"
             error={errors.longitude?.message}
           />
@@ -52,5 +52,5 @@ export function AddForecast() {
         </FormProvider>
       </form>
     </AddForecastsContainer>
-  )
+  );
 }
